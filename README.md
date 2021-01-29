@@ -26,14 +26,22 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+`.forEach` & `.map` are both Higher order functions and methods on the Array.prototype, both of which take a callback function with the same three arguments (`item`, `index`, `array`). `.forEach` DOES NOT automatically return a new array; instead it simply calls the callback function on each member of an array until it has processed each item or a error is thrown. `.map` DOES return a new array where each element is a transformation of the original data using the callback provided.
 
 2. Explain the difference between a callback and a higher order function.
+A higher order function is a function that receives a function as an argument or returns a function for later use. A callback is a function that is passed to another function for later execution.
 
 3. What is closure?
+Closure is the concept / tool of capturing values from parent scopes.
 
 4. Describe the four rules of the 'this' keyword.
+  1. Window / Global binding - In the global scope `this` is bound to the window/global object - except in `strict` mode, where it's undefined.
+  2. Implicit binding - `this` is implicitly bound to the object that calls the function that references it.
+  3. New binding - When used in a constructor function `this` refers to each new created instance of the object created by that constructor
+  4. Explicit binding - Using the `.call`, `.apply`, or `.bind` function explicitly binds `this` to the object passed into that function.
 
 5. Why do we need super() in an extended class?
+  We need `super()` to ensure that a child inherits the the attributes and methods of it's parent.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
